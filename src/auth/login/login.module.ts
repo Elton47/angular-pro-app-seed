@@ -9,7 +9,7 @@ export const ROUTES: Routes = [
     path: '',
     component: LoginComponent
   }
-]
+];
 
 @NgModule({
   imports: [

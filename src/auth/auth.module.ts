@@ -25,7 +25,7 @@ export const ROUTES: Routes = [
       }
     ]
   }
-]
+];
 
 export const firebaseConfig: FirebaseAppConfig = {
   apiKey: "AIzaSyBX_z7enOY_yYre2X4Z0tCbFtyKpcF7KqM",

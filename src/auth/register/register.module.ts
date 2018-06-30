@@ -9,7 +9,7 @@ export const ROUTES: Routes = [
     path: '',
     component: RegisterComponent
   }
-]
+];
 
 @NgModule({
   imports: [
