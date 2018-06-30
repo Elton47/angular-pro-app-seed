@@ -8,6 +8,7 @@ import { Store } from 'store';
 
 // containers
 import { AppComponent } from './containers/app/app.component';
+import { AuthModule } from '../auth/auth.module';
 
 // components
 
@@ -17,7 +18,8 @@ export const ROUTES: Routes = [];
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    AuthModule
   ],
   declarations: [
     AppComponent
@@ -31,13 +33,11 @@ export const ROUTES: Routes = [];
 })
 export class AppModule {}
 
-/*
-var config = {
-  apiKey: "AIzaSyCXz7GrHLBs-xlsCrr185iG4v4UrNreq2Y",
-  authDomain: "fitness-app-e668a.firebaseapp.com",
-  databaseURL: "https://fitness-app-e668a.firebaseio.com",
-  projectId: "fitness-app-e668a",
-  storageBucket: "fitness-app-e668a.appspot.com",
-  messagingSenderId: "1014564696462"
-};
-*/
+// var config = {
+//   apiKey: "AIzaSyBX_z7enOY_yYre2X4Z0tCbFtyKpcF7KqM",
+//   authDomain: "fitness-app-47.firebaseapp.com",
+//   databaseURL: "https://fitness-app-47.firebaseio.com",
+//   projectId: "fitness-app-47",
+//   storageBucket: "fitness-app-47.appspot.com",
+//   messagingSenderId: "692842574156"
+// };
