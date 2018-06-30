@@ -9,6 +9,8 @@ import { Store } from 'store';
 // containers
 import { AppComponent } from './containers/app/app.component';
 import { AuthModule } from '../auth/auth.module';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { AppNavComponent } from './components/app-nav/app-nav.component';
 
 // components
 
@@ -22,7 +24,9 @@ export const ROUTES: Routes = [];
     AuthModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    AppHeaderComponent,
+    AppNavComponent
   ],
   providers: [
     Store
@@ -32,12 +36,3 @@ export const ROUTES: Routes = [];
   ]
 })
 export class AppModule {}
-
-// var config = {
-//   apiKey: "AIzaSyBX_z7enOY_yYre2X4Z0tCbFtyKpcF7KqM",
-//   authDomain: "fitness-app-47.firebaseapp.com",
-//   databaseURL: "https://fitness-app-47.firebaseio.com",
-//   projectId: "fitness-app-47",
-//   storageBucket: "fitness-app-47.appspot.com",
-//   messagingSenderId: "692842574156"
-// };
