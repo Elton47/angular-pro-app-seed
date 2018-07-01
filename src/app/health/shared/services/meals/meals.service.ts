@@ -22,4 +22,12 @@ export class MealsService {
     private db: AngularFireDatabase,
     private authService: AuthService
   ) {}
+
+  addMeal(meal: Meal) {
+    return this.db.list(`meals/${this.authService.user.uid}`).push(meal);
+  }
+
+  removeMeal(key: string) {
+    return this.db.list(`meals/${this.authService.user.uid}`).remove(key);
+  }
 }
