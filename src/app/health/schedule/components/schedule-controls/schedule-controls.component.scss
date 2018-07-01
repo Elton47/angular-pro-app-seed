@@ -1,17 +1,20 @@
 .controls {
-  position: relative;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 48px;
-  padding: 12px 0;
   p {
+    flex: 1;
     margin: 0;
     font-size: 15px;
     font-weight: 500;
+    text-align: center;
   }
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    position: absolute;
-    top: -1px;
     outline: 0;
     background: #f9f9f9;
     border: 1px solid #c1cedb;
@@ -20,12 +23,6 @@
     transition: all .2s ease-in-out;
     &:hover {
       background: darken(#f9f9f9, 5%);
-    }
-    &:first-child {
-      left: -1px;
-    }
-    &:last-child {
-      right: -1px;
     }
   }
 }

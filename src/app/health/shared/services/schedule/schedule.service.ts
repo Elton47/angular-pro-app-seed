@@ -12,4 +12,8 @@ export class ScheduleService {
   constructor(
     private store: Store
   ) {}
+
+  updateDate(date: Date): void {
+    this.date$.next(date);
+  }
 }
