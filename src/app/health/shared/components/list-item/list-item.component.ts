@@ -14,12 +14,8 @@ import { Component, Input, Output, ChangeDetectionStrategy, EventEmitter } from 
       </a>
       <div class="list-item__delete" *ngIf="toggled">
         <p>Delete item?</p>
-        <button class="confirm" type="button" (click)="removeItem()">
-          Yes
-        </button>
-        <button class="cancel" type="button" (click)="toggle()">
-          No
-        </button>
+        <button class="confirm" type="button" (click)="removeItem()">Yes</button>
+        <button class="cancel" type="button" (click)="toggle()">No</button>
       </div>
       <button class="trash" type="button" (click)="toggle()">
         <img src="/img/remove.svg">
