@@ -25,6 +25,10 @@ export class AuthService {
       this.store.set('user', user);
     });
     
+  get user() {
+    return this.angularFireAuth.auth.currentUser;
+  }
+  
   get authState() {
     return this.angularFireAuth.authState;
   }
