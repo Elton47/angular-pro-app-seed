@@ -9,8 +9,11 @@ import { Component, Input, Output, ChangeDetectionStrategy, EventEmitter } from 
       <a [routerLink]="getRoute(item)">
         <p class="list-item__name">{{ item.name }}</p>
         <p class="list-item__ingredients">
-          <span>{{ item.ingredients }}</span>
+          <span *ngIf="item.ingredients; else showWorkout">{{ item.ingredients | join }}</span>
         </p>
+        <ng-template #showWorkout>
+          <span>{{ item | workout }}</span>
+        </ng-template>
       </a>
       <div class="list-item__delete" *ngIf="toggled">
         <p>Delete item?</p>
@@ -39,6 +42,6 @@ export class ListItemComponent {
   }
 
   getRoute(item: any): any[] {
-    return [`../meals`, item.$key];
+    return [`../${item.ingredients ? 'meals' : 'workouts'}`, item.$key];
   }
 }
