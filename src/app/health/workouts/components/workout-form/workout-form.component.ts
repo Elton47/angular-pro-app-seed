@@ -15,6 +15,10 @@ import { Workout } from '../../../shared/services/workouts/workouts.service';
             <input type="text" placeholder="e.g. English Breakfast" formControlName="name">
             <div class="error" *ngIf="required">Workout name is required</div>
           </label>
+          <label>
+            <h3>Type</h3>
+            <workout-type formControlName="type"></workout-type>
+          </label>
         </div>
         <div class="workout-form__submit">
           <div>
@@ -37,7 +41,9 @@ import { Workout } from '../../../shared/services/workouts/workouts.service';
 })
 export class WorkoutFormComponent implements OnChanges {
   form: FormGroup = this.formBuilder.group({
-    name: ['', Validators.required]
+    name: ['', Validators.required],
+    type: 'strength',
+
   });
   toggled: boolean = false;
   exists: boolean = false;
