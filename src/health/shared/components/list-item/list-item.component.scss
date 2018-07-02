@@ -20,6 +20,10 @@
     display: flex;
     align-items: center;
     margin: 0 10px 0 0;
+    animation: slideLeft .35s cubic-bezier(.5, .23, .04, 1) forwards;
+    @keyframes slideLeft {
+      from { opacity: 0; transform: translateX(100%); }
+    }
     p {
       margin: 0 10px 0 0;
       font-size: 14px;
@@ -62,6 +66,8 @@
 }
 .trash {
   @extend %button;
+  z-index: 1;
+  margin: 0;
   border-left: 1px solid #c1cedb;
   padding: 10px 15px;
   background: #f6fafd;

@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter, Input, ChangeDetectionStrategy } from "../../../../node_modules/@angular/core";
-import { User } from '../../../../node_modules/firebase/app';
+import { User } from '../../../auth/shared/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { User } from '../../../../node_modules/firebase/app';
   template: `
     <div class="app-header">
       <div class="wrapper">
-        <img src="/img/logo.svg" />
+        <a href=""><img src="/img/logo.svg" /></a>
         <div class="app-header__user-info" *ngIf="user?.authenticated">
           <span (click)="logoutUser()"></span>
         </div>

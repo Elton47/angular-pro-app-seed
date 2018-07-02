@@ -9,13 +9,12 @@ import { Router } from '../../../../node_modules/@angular/router';
   selector: 'app-root',
   styleUrls: ['app.component.scss'],
   template: `
-    <div>
-      <app-header [user]="user$ | async" (logout)="onLogout()"></app-header>
-      <app-nav *ngIf="(user$ | async)?.authenticated"></app-nav>
-      <div class="wrapper">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
+    <app-header [user]="user$ | async" (logout)="onLogout()"></app-header>
+    <app-nav *ngIf="(user$ | async)?.authenticated"></app-nav>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer *ngIf="(user$ | async)?.authenticated"></app-footer>
   `
 })
 export class AppComponent implements OnInit, OnDestroy {

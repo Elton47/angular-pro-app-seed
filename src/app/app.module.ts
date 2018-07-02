@@ -12,6 +12,7 @@ import { AuthModule } from '../auth/auth.module';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { AppNavComponent } from './components/app-nav/app-nav.component';
 import { HealthModule } from '../health/health.module';
+import { AppFooterComponent } from './components/app-footer/app-footer.component';
 
 // components
 
@@ -30,7 +31,8 @@ export const ROUTES: Routes = [
   declarations: [
     AppComponent,
     AppHeaderComponent,
-    AppNavComponent
+    AppNavComponent,
+    AppFooterComponent
   ],
   providers: [
     Store

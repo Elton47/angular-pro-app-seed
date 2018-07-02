@@ -3,7 +3,8 @@
   display: block;
 }
 .app-nav {
-  background: #8022b0;
+  background: linear-gradient(to right, #ef6c00, #e65100);
+  box-shadow: 0 1px 1px 0 rgba(60, 64, 67, .08), 0 1px 3px 1px rgba(60, 64, 67, .16);
   text-align: center;
   a {
     color: rgba(255,255,255,.6);

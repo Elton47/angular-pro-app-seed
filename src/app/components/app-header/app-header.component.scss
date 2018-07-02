@@ -1,10 +1,11 @@
 .app-header {
   background: #fff;
   border-bottom: 1px solid #c1cedb;
-  padding: 15px 0;
+  padding: .5rem 0;
   text-align: center;
   img {
     display: inline-block;
+    filter: hue-rotate(100deg) brightness(125%);
   }
   &__user-info {
     position: absolute;

@@ -13,7 +13,7 @@
   background: #fff;
   cursor: pointer;
   &:hover span {
-    background: #39a1e7;
+    background: #607d8b;
     color: #fff;
   }
   span {
@@ -28,7 +28,7 @@
     font-weight: 600;
     transition: all .2s ease-in-out;
     &.active {
-      background: #39a1e7;
+      background: #607d8b;
       color: #fff;
     }
   }
