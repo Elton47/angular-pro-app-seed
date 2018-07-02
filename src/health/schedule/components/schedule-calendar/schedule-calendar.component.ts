@@ -57,9 +57,7 @@ export class ScheduleCalendarComponent implements OnChanges {
   
   onChange(weekOffset: number): void {
     const startOfWeek = this.getStartOfWeek(new Date());
-    const startDate = (
-      new Date(startOfWeek.getFullYear(), startOfWeek.getMonth(), startOfWeek.getDate())
-    );
+    const startDate = new Date(startOfWeek.getFullYear(), startOfWeek.getMonth(), startOfWeek.getDate());
     startDate.setDate(startDate.getDate() + weekOffset * 7);
     this.change.emit(startDate);
   }
